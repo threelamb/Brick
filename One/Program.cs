@@ -10,6 +10,7 @@ namespace One
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hellow, One!");
         }
     }
 }
