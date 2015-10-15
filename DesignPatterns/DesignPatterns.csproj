@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FCB8667-2E0F-4F3B-BF4D-9EA19796E91B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1_AbstarctFactory\Computer\IComputerProducer.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\ICpu.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\IRam.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\MacCpu.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\MacProducer.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\MacRam.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\PcCpu.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\PcProducer.cs" />
+    <Compile Include="1_AbstarctFactory\Computer\PcRam.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ConcreateCreator1.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ConcreateCreator2.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ICreator.cs" />
+    <Compile Include="1_AbstarctFactory\Product\IProductA.cs" />
+    <Compile Include="1_AbstarctFactory\Product\IProductB.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ProductA1.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ProductA2.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ProductB1.cs" />
+    <Compile Include="1_AbstarctFactory\Product\ProductB2.cs" />
+    <Compile Include="2_Adapter\ClassAdapter\Adaptee.cs" />
+    <Compile Include="2_Adapter\ClassAdapter\Adapter.cs" />
+    <Compile Include="2_Adapter\ClassAdapter\ITarget.cs" />
+    <Compile Include="2_Adapter\DefaultAdapter\DefaultAdapter.cs" />
+    <Compile Include="2_Adapter\DefaultAdapter\ITarget.cs" />
+    <Compile Include="2_Adapter\DefaultAdapter\MyInteresting.cs" />
+    <Compile Include="2_Adapter\ObjectAdapter\Adaptee.cs" />
+    <Compile Include="2_Adapter\ObjectAdapter\Adapter.cs" />
+    <Compile Include="2_Adapter\ObjectAdapter\ITarget.cs" />
+    <Compile Include="3_Bridge\Abstraction.cs" />
+    <Compile Include="3_Bridge\Client.cs" />
+    <Compile Include="3_Bridge\ConcreteImplementorA.cs" />
+    <Compile Include="3_Bridge\ConcreteImplementorB.cs" />
+    <Compile Include="3_Bridge\IImplementor.cs" />
+    <Compile Include="3_Bridge\RefinedAbstraction.cs" />
+    <Compile Include="4_Builder\Client.cs" />
+    <Compile Include="4_Builder\Man.cs" />
+    <Compile Include="4_Builder\ManBuilder.cs" />
+    <Compile Include="4_Builder\IPersonBuilder.cs" />
+    <Compile Include="4_Builder\Person.cs" />
+    <Compile Include="4_Builder\PersonDirector.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1_AbstarctFactory\Description.txt" />
+    <Content Include="2_Adapter\Adapter.txt" />
+    <Content Include="3_Bridge\Bridge.txt" />
+    <Content Include="4_Builder\Builder.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
