@@ -10,7 +10,12 @@ namespace Desk
     {
         static void Main(string[] args)
         {
-            
+            IntPtr res = WinAPI.FindWindow(null, "360云盘");
+            if (res != IntPtr.Zero)
+            {
+                WinAPI.SetForegroundWindow(res);
+                WinAPI.SendMessage(res, WinAPI.BM_CLICK, 0, 0);
+            }
         }
     }
 }
