@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace One.Common
+namespace Common
 {
     public class HashHelper
     {

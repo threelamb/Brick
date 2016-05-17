@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace One.Common
+namespace Common
 {
     class TypeHelper
     {

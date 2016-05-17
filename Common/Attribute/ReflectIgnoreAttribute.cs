@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace One.Common.Attribute
+namespace Common.Attribute
 {
     /// <summary>
     /// Ignore property with this attribute when reflecting.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
-    public class ReflectIgnore : System.Attribute
+    public class ReflectIgnoreAttribute : System.Attribute
     {
-        public ReflectIgnore(bool isIgnore = true)
+        public ReflectIgnoreAttribute(bool isIgnore = true)
         {
             Ignore = isIgnore;
         }

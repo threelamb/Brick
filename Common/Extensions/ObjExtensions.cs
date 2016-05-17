@@ -1,9 +1,9 @@
-﻿using One.Common.Attribute;
+﻿using Common.Attribute;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace One.Common
+namespace Common
 {
     public static class ObjExtensions
     {
@@ -29,7 +29,7 @@ namespace One.Common
             {
                 foreach (var item in propertyList)
                 {
-                    var reflectIgnoreAttr = item.GetCustomAttribute(typeof(ReflectIgnore)) as ReflectIgnore;
+                    var reflectIgnoreAttr = item.GetCustomAttribute(typeof(ReflectIgnoreAttribute)) as ReflectIgnoreAttribute;
                     if (reflectIgnoreAttr != null && reflectIgnoreAttr.Ignore || item.GetValue(para) == null)
                     {
                         continue;

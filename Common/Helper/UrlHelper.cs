@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace One.Common
+namespace Common
 {
     public class UrlHelper
     {

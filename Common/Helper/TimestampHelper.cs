@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace One.Common
+namespace Common
 {
     /// <summary>
     /// Summary description for TimestampHelper
