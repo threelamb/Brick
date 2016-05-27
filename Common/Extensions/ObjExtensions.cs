@@ -1,9 +1,12 @@
-﻿using Common.Attribute;
+﻿using EmitMapper;
+using One.Common.Attribute;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 
-namespace Common
+namespace One.Common
 {
     public static class ObjExtensions
     {
@@ -40,5 +43,24 @@ namespace Common
 
             return sortDic;
         }
+
+
+        #region Mapper
+        /// <summary>
+        /// Create Traget class type object and set its property value the same as the the property with the same name of Source type object.
+        /// </summary>
+        /// <typeparam name="Source">Source class type</typeparam>
+        /// <typeparam name="Target">Target class type</typeparam>
+        /// <param name="source">Source class type object</param>
+        /// <returns></returns>
+        public static Target Map<Source, Target>(this Source source)
+            where Source : new()
+            where Target : new()
+        {
+            if (source == null) return new Target();
+            var mapper = ObjectMapperManager.DefaultInstance.GetMapper<Source, Target>();
+            return mapper.Map(source);
+        }
+        #endregion 
     }
 }

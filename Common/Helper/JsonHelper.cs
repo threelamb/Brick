@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Common
+namespace One.Common
 {
     public class JsonHelper
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Common.Attribute
+namespace One.Common.Attribute
 {
     /// <summary>
     /// Ignore property with this attribute when reflecting.
